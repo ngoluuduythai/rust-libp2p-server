@@ -100,7 +100,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             async_std::task::spawn(fut);
         }))
         .build();
-    swarm.listen_on("/ip4/0.0.0.0/tcp/4001".parse()?)?;
+    swarm.listen_on("/ip4/0.0.0.0/tcp/4100".parse()?)?;
 
     let mut metric_registry = Registry::default();
     let metrics = Metrics::new(&mut metric_registry);
